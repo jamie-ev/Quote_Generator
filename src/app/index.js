@@ -18,7 +18,7 @@ const submitRequest = (quoteIndex, colorIndex) => {
 // set default state
 const defaultState = {
   quoteIndex: Math.floor(Math.random() * 16),
-  colorIndex: Math.floor(Math.random() * 6)
+  colorIndex: Math.floor(Math.random() * 9)
 };
 
 // reducer
@@ -119,7 +119,7 @@ class Presentational extends React.Component {
     ];
     
     // colors array for generating random background colors
-    const colors = ['#A9633D', '#C8B966', '#647F2E', '#3C832F', '#2E7F4A', '#2E7F73'];
+    const colors = ['#A9633D', '#83772F', '#647F2E', '#3C832F', '#2E7F4A', '#2E7F73', '#2F6583', '#2F3B83', '#772F83'];
     
     const color = colors[this.props.newColor]; // new random color
     const text = quotesArr[this.props.newQuote].text; // new random quote
