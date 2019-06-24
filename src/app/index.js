@@ -119,7 +119,7 @@ class Presentational extends React.Component {
     ];
     
     // colors array for generating random background colors
-    const colors = ['#C88866', '#C8B966', '#A6C866', '#75C866', '#66C888', '#66C8B9'];
+    const colors = ['#A9633D', '#C8B966', '#647F2E', '#3C832F', '#2E7F4A', '#2E7F73'];
     
     const color = colors[this.props.newColor]; // new random color
     const text = quotesArr[this.props.newQuote].text; // new random quote
