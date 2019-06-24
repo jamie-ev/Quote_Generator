@@ -1,4 +1,4 @@
-# Quote Generate
+# Quote Generator
 Built using React.js and Redux
 
 ## Description
