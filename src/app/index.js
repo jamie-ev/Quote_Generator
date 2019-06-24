@@ -3,8 +3,10 @@ var ReactDOM = require('react-dom');
 var ReactRedux = require('react-redux);
 var Redux = require('redux');
 
+// Redux code
 const NEWQ = 'NEWQ';
 
+// action for submitting request for a new quote
 const submitRequest = (quoteIndex, colorIndex) => {
   return {
     type: NEWQ,
@@ -13,11 +15,13 @@ const submitRequest = (quoteIndex, colorIndex) => {
   }
 }
 
+// set default state
 const defaultState = {
   quoteIndex: Math.floor(Math.random() * 16),
   colorIndex: Math.floor(Math.random() * 6)
 };
 
+// reducer
 const quoteReducer = (state = defaultState, action) => {
   switch(action.type) {
     case NEWQ:
@@ -29,20 +33,24 @@ const quoteReducer = (state = defaultState, action) => {
   }
 }
 
+// standard Redux code
 const store = Redux.createStore(quoteReducer);
 
 const Provider = ReactRedux.Provider;
 const connect = ReactRedux.connect;
 
+// React code
 class Presentational extends React.Component {
   constructor(props) {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   };
+  // new quote button
   handleClick() {
     this.props.newQuoteRequest(Math.floor(Math.random() * 16), Math.floor(Math.random() * 6));
   }
   render() {
+    // quote repository object
     const quotesArr = [
       {
         text: 'No guts, no story.',
@@ -110,11 +118,12 @@ class Presentational extends React.Component {
       },
     ];
     
+    // colors array for generating random background colors
     const colors = ['#C88866', '#C8B966', '#A6C866', '#75C866', '#66C888', '#66C8B9'];
     
-    const color = colors[this.props.newColor];
-    const text = quotesArr[this.props.newQuote].text;
-    const author = quotesArr[this.props.newQuote].author;
+    const color = colors[this.props.newColor]; // new random color
+    const text = quotesArr[this.props.newQuote].text; // new random quote
+    const author = quotesArr[this.props.newQuote].author; // and its associated author
     const tweetLink = 'twitter.com/intent/tweet?hashtags=quotes&text=' + text + ' ' + author + '.';
     return (
       <div id="background" style={{backgroundColor: color}}>
@@ -134,6 +143,7 @@ class Presentational extends React.Component {
   }
 }
 
+// React-Redux code
 const mapStateToProps = (state) => {
   return {
     newQuote: state.quoteIndex,
@@ -161,4 +171,5 @@ class AppWrapper extends React.Component {
   }
 }
 
+// Render the component to the DOM
 ReactDOM.render(<AppWrapper />, document.getElementById('quote-box'));

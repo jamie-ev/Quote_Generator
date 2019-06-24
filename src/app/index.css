@@ -10,17 +10,20 @@ h1 {
   height: 50px;
 }
 
+/* quote's author */
 #author {
   font-size: 24px;
   text-align: right;
   padding-top: 40px;
 }
 
+/* full page background */
 #background {
   width: 100%;
   height: 100vh;
 }
 
+/* quote box */
 #center-box {
   margin: 0 auto;
   width: 35%;
@@ -31,6 +34,7 @@ h1 {
   height: 250px;
 }
 
+/* bottom tweet/new quote bar */
 #flex-box {
   display: flex;
   flex-direction: row;
@@ -38,6 +42,7 @@ h1 {
   padding-top: 15px;
 }
 
+/* twitter icon */
 #tweet-quote i {
   color: #fff;
   padding: 10px;
@@ -69,12 +74,14 @@ footer {
   padding-top: 50px;
 }
 
+/* responsive design for smaller computers */
 @media (max-width: 992px) {
   #center-box {
     width: 60%;
   }
 }
 
+/* responsive design for tablets and smartphones */
 @media (max-width: 650px) {
   #center-box {
     width: 80%;
