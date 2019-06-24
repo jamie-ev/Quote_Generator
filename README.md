@@ -9,7 +9,7 @@ I built this quote generator app to help me deepen my understanding of React.js 
 
 You can find my original files in /src/app, and the root files are copied over from /src/build. I commented fairly extensively throughout the files, but please let me know if you have any questions. To view this project live on GitHub Pages, please visit [this link](https://jamie-ev.github.io/Quote_Generator/). Thanks for dropping by!
 
-# Depencies
+### Depencies
 
 * React
 * ReactDOM
