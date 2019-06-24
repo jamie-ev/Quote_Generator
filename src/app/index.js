@@ -17,7 +17,7 @@ const submitRequest = (quoteIndex, colorIndex) => {
 
 // set default state
 const defaultState = {
-  quoteIndex: Math.floor(Math.random() * 16),
+  quoteIndex: Math.floor(Math.random() * 20),
   colorIndex: Math.floor(Math.random() * 9)
 };
 
@@ -47,7 +47,7 @@ class Presentational extends React.Component {
   };
   // new quote button
   handleClick() {
-    this.props.newQuoteRequest(Math.floor(Math.random() * 16), Math.floor(Math.random() * 6));
+    this.props.newQuoteRequest(Math.floor(Math.random() * 20), Math.floor(Math.random() * 9));
   }
   render() {
     // quote repository object
@@ -115,6 +115,22 @@ class Presentational extends React.Component {
       {
         text: 'Believe you can and you’re halfway there.',
         author: 'Theodore Roosevelt'
+      },
+      {
+        text: 'The way to get started is to quit talking and begin doing.',
+        author: 'Walt Disney'
+      },
+      {
+        text: 'Don’t let yesterday take up too much of today.',
+        author: 'Will Rogers'
+      },
+      {
+        text: 'You learn more from failure than from success. Don\'t let it stop you.',
+        author: 'Unknown'
+      },
+      {
+        text: 'We may encounter many defeats but we must not be defeated.',
+        author: 'Maya Angelou'
       },
     ];
     
