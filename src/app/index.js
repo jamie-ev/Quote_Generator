@@ -149,7 +149,7 @@ class Presentational extends React.Component {
           <p id="author" style={{color: color}}>- {author}</p>
           <div id="flex-box">
             <a href={tweetLink} id="tweet-quote" target="_blank" rel="noopener" aria-label="Tweet this quote" title="Tweet this quote" style={{color: color}}><i className="fa fa-twitter" style={{backgroundColor: color}}></i></a>
-            <button id="new-quote" onClick={this.handleClick} style={{backgroundColor: color}}>New Quote</button>
+            <button id="new-quote" aria-label="Get new quote" onClick={this.handleClick} style={{backgroundColor: color}}>New Quote</button>
           </div>
         </div>
         <footer>Copyright 2019, Jamie Ev.</footer>
