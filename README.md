@@ -3,7 +3,7 @@ Built using React.js and Redux
 
 ## Description
 
-I built this quote generator app to help me deepen my understanding of React.js and to practice using React with Redux. The HTML is very minimal as my React/Redux code, housed in the .js file, does all the heavy lifting of rendering HTML from JSX. A variety of functions are built into the React/Redux code to determine the logic of the app and manage state changes. Using Redux ensures one-directional data flow.
+I built this fully responsive and accessible quote generator app to help me deepen my understanding of React.js and to practice using React with Redux. The HTML is very minimal as my React/Redux code, housed in the .js file, does all the heavy lifting of rendering HTML from JSX. A variety of functions are built into the React/Redux code to determine the logic of the app and manage state changes. Using Redux ensures one-directional data flow.
 
 ## Getting Started
 
