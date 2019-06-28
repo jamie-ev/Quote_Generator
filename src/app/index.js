@@ -140,7 +140,7 @@ class Presentational extends React.Component {
     const color = colors[this.props.newColor]; // new random color
     const text = quotesArr[this.props.newQuote].text; // new random quote
     const author = quotesArr[this.props.newQuote].author; // and its associated author
-    const tweetLink = 'twitter.com/intent/tweet?hashtags=quotes&text=' + text + ' ' + author + '.';
+    const tweetLink = 'https://twitter.com/intent/tweet?hashtags=quotes&text=' + text + ' ' + author + '.';
     return (
       <div id="background" style={{backgroundColor: color}}>
         <div id="center-box" style={{backgroundColor: "#fff"}}>
@@ -148,7 +148,7 @@ class Presentational extends React.Component {
           <h1 id="text" style={{color: color}}><i className="fa fa-quote-left"></i> {text}</h1>
           <p id="author" style={{color: color}}>- {author}</p>
           <div id="flex-box">
-            <a href={tweetLink}  id="tweet-quote" aria-label="Tweet this quote" title="Tweet this quote" style={{color: color}}><i className="fa fa-twitter" style={{backgroundColor: color}}></i></a>
+            <a href={tweetLink} id="tweet-quote" target="_blank" rel="noopener" aria-label="Tweet this quote" title="Tweet this quote" style={{color: color}}><i className="fa fa-twitter" style={{backgroundColor: color}}></i></a>
             <button id="new-quote" onClick={this.handleClick} style={{backgroundColor: color}}>New Quote</button>
           </div>
         </div>
